@@ -9,3 +9,4 @@ GA_pyGAD/__pycache__/
 .idea
 Data/__pycache__/
 *.pyc
+*.png

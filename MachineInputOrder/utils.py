@@ -34,3 +34,4 @@ def MSE(x, y):
     mse = np.square(np.subtract(x, y)).mean()
 
     return mse
+
