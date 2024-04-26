@@ -1,4 +1,3 @@
-import geneticpython
 from objects import *
 
 from Data.Dataset.Dataset import Dataset
@@ -8,15 +7,13 @@ from Data.Dataset.Dataset import Dataset
 # from Data.Adams.abz8.abz8 import Dataset
 # from Data.Adams.abz9.abz9 import Dataset
 from Config.Run_Config import Run_Config
-from geneticpython.models import PermutationIndividual, IntIndividual
+from geneticpython.models import PermutationIndividual
 from geneticpython import Population
-from geneticpython.core.operators import RouletteWheelSelection, OrderCrossover, PointCrossover, FlipBitMutation, \
-    RouletteWheelReplacement, SwapMutation
+from geneticpython.core.operators import RouletteWheelSelection, RouletteWheelReplacement, SwapMutation
 from geneticpython import GAEngine
-from geneticpython.tools.visualization import plot_single_objective_history
 
 # from GA_pyGAD.Visualize import show_evolution
-from GA_geneticpython.Visualize import show_evolution
+from GA_geneticpython.result.MIO.Visualize_spearman import show_evolution
 
 from PMXCrossover import PMXCrossover
 
