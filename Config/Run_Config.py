@@ -34,11 +34,11 @@ class Run_Config:
 
         script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Get the directory of the current script
         folder_name = 'result'  # Define the folder name
-        save_path = os.path.join(script_dir, folder_name)  # Construct the full path to the folder
-        if not os.path.exists(save_path):
-            os.makedirs(save_path)
+        self.save_path = os.path.join(script_dir, folder_name)  # Construct the full path to the folder
+        if not os.path.exists(self.save_path):
+            os.makedirs(self.save_path)
         now = datetime.datetime.now()
         self.now = now.strftime('%Y-%m-%d-%H-%M-%S')
-        self.filename = {'log':self.now+'.csv',
+        self.filename = {'log': self.now + '.csv',
                          'machine':self.now+'_machine.csv',
                          'gantt':self.now+'.png'}

@@ -44,7 +44,7 @@ def Gantt(result, num, config):
 
     # Save the figure as an image file
     if config.save_gantt:
-        fig.savefig(config.filepath['gantt'], format='png')
+        fig.savefig(config.filename['gantt'], format='png')
 
     # Create a BytesIO object
     image_bytes_io = BytesIO()

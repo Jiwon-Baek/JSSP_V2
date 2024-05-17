@@ -4,7 +4,7 @@ from collections import OrderedDict, defaultdict
 
 
 def machine_log(config):
-    df = pd.read_csv(config.filepath['log'])
+    df = pd.read_csv(config.filename['log'])
     df = df.drop(df.columns[0], axis=1)
     # Filter 'Started' and 'Finished' events
     df_started = df[df['Event'] == 'Started'].drop(['Event', 'Process'], axis=1).reset_index(drop=True)
@@ -33,5 +33,5 @@ def machine_log(config):
     data = data.sort_values(by=['Start'])
     data.reset_index(drop=True, inplace=True)
     if config.save_machinelog:
-        data.to_csv(config.filepath['machine'])
+        data.to_csv(config.filename['machine'])
     return data
