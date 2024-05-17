@@ -42,7 +42,8 @@ mutation = SwapMutation(pm=p_mutation, n_points=swap_pairs)
 # this function decides which individuals will be survived
 replacement = RouletteWheelReplacement()
 
-engine = GAEngine(population, selection=selection,
+engine = GAEngine(population,
+                  selection=selection,
                   selection_size=n_selection,
                   crossover=crossover,
                   mutation=mutation,
@@ -58,7 +59,6 @@ MIO = False
 replace_MIO = True
 MIO_adaptive = True
 MIO_type = 0
-
 
 @engine.minimize_objective
 def fitness(indv):
