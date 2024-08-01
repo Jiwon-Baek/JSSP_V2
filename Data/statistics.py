@@ -1,11 +1,12 @@
-from Adams.abz5.abz5 import Dataset
+# from Adams.abz5.abz5 import Dataset
 # from FT.ft10.ft10 import Dataset
 # from Dataset.Dataset import Dataset
 # from Taillard.ta01.ta01 import Dataset
+from Data.Dataset.Dataset import Dataset
 import matplotlib.pyplot as plt
 import numpy as np
-# filename = 'test_2020.txt'
-dataset = Dataset()
+filename = 'test_44.txt'
+dataset = Dataset(filename)
 # dataset = Dataset(filename)
 op_data = np.array(dataset.op_data)
 

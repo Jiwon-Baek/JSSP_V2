@@ -13,7 +13,7 @@ from geneticpython.core.operators import RouletteWheelSelection, RouletteWheelRe
 from geneticpython import GAEngine
 
 # from GA_pyGAD.Visualize import show_evolution
-from GA_geneticpython.result.MIO.Visualize_spearman import show_evolution
+from GA_geneticpython.MIO.Visualize_evolution import show_evolution
 
 from PMXCrossover import PMXCrossover
 
